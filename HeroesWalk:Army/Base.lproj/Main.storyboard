@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HeroesWalk_Army" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,96 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Byb-nw-pth">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dungeon_floor_creativemarket2-o" translatesAutoresizingMaskIntoConstraints="NO" id="yDQ-cS-Au5">
+                                <rect key="frame" x="0.0" y="498" width="600" height="102"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="102" id="7nb-ht-svh"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="102" id="Bpu-MO-Ms2"/>
+                                    <constraint firstAttribute="width" constant="400" id="GSE-Pn-FrD"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Bpu-MO-Ms2"/>
+                                        <exclude reference="GSE-Pn-FrD"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Bpu-MO-Ms2"/>
+                                        <include reference="GSE-Pn-FrD"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="din-oJ-8Ek">
+                                <rect key="frame" x="154" y="510" width="292" height="75"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hj-Gg-0GN">
+                                        <rect key="frame" x="0.0" y="0.0" width="84" height="75"/>
+                                        <state key="normal" image="heart"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gN2-hp-oWA">
+                                        <rect key="frame" x="104" y="0.0" width="84" height="75"/>
+                                        <state key="normal" image="strong"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPO-6M-HFv">
+                                        <rect key="frame" x="208" y="0.0" width="84" height="75"/>
+                                        <state key="normal" image="money"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="Ay5-fD-ZyZ"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="96T-Ac-Uim">
+                                <rect key="frame" x="0.0" y="230" width="164" height="280"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="walk_000" translatesAutoresizingMaskIntoConstraints="NO" id="SXT-1y-YJz">
+                                        <rect key="frame" x="0.0" y="0.0" width="164" height="280"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="164" id="B6h-Iq-evK">
+                                        <variation key="widthClass=compact" constant="130"/>
+                                        <variation key="heightClass=compact-widthClass=compact" constant="100"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="280" id="QeD-mK-6N1">
+                                        <variation key="widthClass=compact" constant="200"/>
+                                        <variation key="heightClass=compact-widthClass=compact" constant="130"/>
+                                    </constraint>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Byb-nw-pth" secondAttribute="trailing" id="Jy5-s9-TQG"/>
+                            <constraint firstAttribute="trailing" secondItem="yDQ-cS-Au5" secondAttribute="trailing" id="NYD-Hc-lGU"/>
+                            <constraint firstItem="Byb-nw-pth" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Njd-07-oml"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yDQ-cS-Au5" secondAttribute="bottom" id="W3K-VT-eFo"/>
+                            <constraint firstItem="yDQ-cS-Au5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="W4p-BN-LaH"/>
+                            <constraint firstItem="din-oJ-8Ek" firstAttribute="top" secondItem="96T-Ac-Uim" secondAttribute="bottom" id="XWU-fR-9Rh"/>
+                            <constraint firstItem="din-oJ-8Ek" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bbj-of-1uC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Byb-nw-pth" secondAttribute="bottom" id="j3q-Ik-XGK"/>
+                            <constraint firstItem="Byb-nw-pth" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xhq-Z9-Sbi"/>
+                            <constraint firstItem="96T-Ac-Uim" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="yjD-Xr-c6n"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="din-oJ-8Ek" secondAttribute="bottom" constant="15" id="zDo-DP-lYl"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="429"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="2732" height="2048"/>
+        <image name="dungeon_floor_creativemarket2-o" width="1160" height="772"/>
+        <image name="heart" width="71" height="64"/>
+        <image name="money" width="59" height="66"/>
+        <image name="strong" width="84" height="75"/>
+        <image name="walk_000" width="164" height="280"/>
+    </resources>
 </document>
